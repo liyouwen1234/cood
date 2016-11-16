@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+    .clearfix:after, .clearfix:before{
+        content: "";
+        display: table;
+    }
+    .clearfix:after{
+        clear:both;
+    }
+    .clearfix{
+        *zoom:1;
+    }
+    html, body{
+        width: 100%;
+        height: 100%;
+        background: #eee;
+    }
+    .wrapper{
+        margin: 200px 71px;
+    }
+    .box{
+      width:300px;
+      height: 500px;
+      border: 1px solid #000;
+      background:#ffffff;
+      float: left;
+      margin: 0 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    li{
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+    .box li:nth-child(1){
+        padding-top: 150pxd;
+        font-size: 70px;
+        height: 150px;
+        font-weight: bold;
+    }
+    .box li:nth-child(2){
+        font-size: 40px;
+        height: 50px;
+    }
+    .box li:nth-child(3){
+        font-size: 40px;
+        height: 50px;
+    }
+    .box li:nth-child(4){
+        font-size: 20px;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+        line-height: 50px;
+    }
+    .word{
+     float: left;
+     height: 50px;
+     width: 100%;
+     z-index: 999;
+    }
+    .A:hover li:nth-child(1), .B:hover li:nth-child(1), .C:hover li:nth-child(1){
+         color: #fff;
+         animation:move .5s linear;
+    }
+    .A:hover, .B:hover, .C:hover{
+        background: #000;
+    }
+    .A:hover li:nth-child(2), .B:hover li:nth-child(2), .C:hover li:nth-child(2){
+         color: #fff;
+         text-shadow: 2px 2px 3px gray;
+         animation:fly .3s linear;
+         }
+    .A:hover li:nth-child(3), .B:hover li:nth-child(3), .C:hover li:nth-child(3){
+         color: #fff;
+         text-shadow: 2px 2px 3px gray;
+        animation:fly .3s linear;
+    }
+    .A:hover li:nth-child(4) .word, .B:hover li:nth-child(4) .word, .C:hover li:nth-child(4) .word{
+
+            background: #bb1010;
+            animation:move1 .5s linear forwards;
+            transition:all .5s linear;
+
+    }
+    @-webkit-keyframes move{
+        0%{
+
+        }
+        100%{
+          transform:rotate(360deg)
+        }
+    }
+    @-webkit-keyframes fly{
+        0%{
+           font-size: 0px;
+        }
+        100%{
+         font-size: 40px;
+        }
+    }
+        @-webkit-keyframes move1{
+        0%{
+           transform:translate(250px)
+        }
+        100%{
+          transform:translate(0px);
+        }
+    }
+    </style>
+</head>
+<body>
+<div class="wrapper clearfix">
+    <ul class="A box">
+        <li>A</li>
+        <li>HTML+CSS</li>
+        <li>用代码创造梦想</li>
+        <li><div class="word">付出不亚于任何人努力</div></li>
+    </ul>
+    <ul class="B box">
+        <li>B</li>
+        <li>HTML+CSS</li>
+        <li>用代码创造梦想</li>
+        <li><div class="word">付出不亚于任何人努力</div></li>
+    </ul>
+    <ul class="C box">
+        <li>C</li>
+        <li>HTML+CSS</li>
+        <li>用代码创造梦想</li>
+        <li><div class="word">付出不亚于任何人努力</div></li>
+    </ul>
+</div>
+</body>
+</html>
